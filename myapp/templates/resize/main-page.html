@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+      <div class="d-flex justify-content-center main-form">
+            <form class="" action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-row d-flex justify-content-center">
+                  {{ form.image|as_crispy_field }}
+              </div>
+              <div class="form-row">
+                  <div class="mr-2">
+                    {{ form.height|as_crispy_field }}
+                  </div>
+                  <div>
+                    {{ form.weight|as_crispy_field }}
+                  </div>
+              </div>
+                <div class="d-flex justify-content-center">
+                    <input type="submit" class="mt-2 btn btn-secondary" value="Загрузить">
+                </div>
+            </form>
+      </div>
+{% endblock %}

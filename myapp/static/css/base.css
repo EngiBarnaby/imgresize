@@ -1,0 +1,31 @@
+.main-header {
+  background-color: #d1e0e0;
+}
+
+a {
+  color: black;
+}
+
+
+h1 {
+  color: crimson;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.asteriskField {
+    display: none;
+}
+
+.main-form {
+    margin-top: 150px;
+}
